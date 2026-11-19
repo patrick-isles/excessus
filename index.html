@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXCESSUS</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="grain"></div>
+
+  <!-- Opening Threshold Veil -->
+  <div id="veil" class="veil">
+    <div class="veil-inner">
+      <div class="veil-epigraph">ASSENTING UP TO THE POINT OF COLLAPSE</div>
+      <h1 class="veil-title">EXCESSUS</h1>
+      <p class="veil-sub">
+        A procedural orchestral-noise and chiaroscuro dissolution engine.<br />
+        Every interaction pushes bounded form closer to harmonic overload and void.
+      </p>
+      <button id="enterBtn" class="enter-btn">[ ENTER ]</button>
+      <div class="veil-hint">HEADPHONES RECOMMENDED · HOLD SPACE OR BUTTON TO ASSENT · R RESET · H HIDE UI</div>
+    </div>
+  </div>
+
+  <!-- Sovereign Interface -->
+  <div id="hud" class="hud hidden">
+    <header class="hud-top">
+      <div class="phase-wrap">
+        <span id="phaseNum" class="phase-num">I</span>
+        <div>
+          <div id="phaseName" class="phase-name">DISCONTINUITAS</div>
+          <div id="phaseCap" class="phase-cap">Bound form. Stillness before expenditure.</div>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button id="lockBtn" class="btn">LOCK: OFF</button>
+        <button id="resetBtn" class="btn">VOID</button>
+        <button id="muteBtn" class="btn">SILENCE</button>
+      </div>
+    </header>
+
+    <div class="center-action">
+      <button id="assentBtn" class="assent-btn">HOLD TO ASSENT</button>
+      <div class="meter-track"><div id="meterFill" class="meter-fill"></div></div>
+    </div>
+
+    <footer class="hud-bottom">
+      <div class="controls">
+        <label class="knob">
+          <span>THRESHOLD <em id="v-assent">0.08</em></span>
+          <input id="assentSlider" type="range" min="0" max="1" step="0.005" value="0.08" />
+        </label>
+        <label class="knob">
+          <span>FEEDBACK <em id="v-feedback">0.60</em></span>
+          <input id="feedbackSlider" type="range" min="0" max="1" step="0.01" value="0.60" />
+        </label>
+        <label class="knob">
+          <span>CORROSION <em id="v-corrosion">0.65</em></span>
+          <input id="corrosionSlider" type="range" min="0" max="1" step="0.01" value="0.65" />
+        </label>
+      </div>
+
+      <div class="telemetry">
+        <span>INTEGRITY: <strong id="telIntegrity">99%</strong></span>
+        <span>EXPENDITURE: <strong id="telExpend">0.00</strong></span>
+        <span>COLLAPSES: <strong id="telCollapses">0</strong></span>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
